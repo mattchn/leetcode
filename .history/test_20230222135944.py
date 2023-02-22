@@ -1,5 +1,3 @@
-import heapq
-
 def ifAnagram(word1, word2):
    if len(word1) != len(word2):
       return False
@@ -47,12 +45,8 @@ def firstAndLast(arr, target):
    return [first, last]
    
 def kthLargest(arr, k):
-   arr = [-elem for elem in arr]
-   heapq.heapify(arr)
-   for i in range(k-1):
-      heapq.heappop(arr)
-   
-   return -heapq.heappop(arr)
+   sorted_arr = sorted(arr)
+   return (sorted_arr[-k])
    
 
    
