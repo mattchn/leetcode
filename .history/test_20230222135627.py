@@ -8,9 +8,7 @@ def firstAndLast(arr, target):
    def find_start(arr, target):
       if arr[0] == target:
          return 0
-      
       left, right = 0, len(arr) -1
-      
       while left <= right:
          mid = (left + right) // 2
          if arr[mid] == target and arr[mid - 1] < target:
@@ -27,7 +25,6 @@ def firstAndLast(arr, target):
          return len(arr) - 1
       
       left, right = 0, len(arr) - 1
-      
       while left <= right:
          mid = (left + right) // 2
          if arr[mid] == target and arr[mid + 1] > target:
