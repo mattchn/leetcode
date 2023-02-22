@@ -63,19 +63,8 @@ def kthLargest(arr, k):
 def symmetricTree(root):
    root1 = root.left
    root2 = root.right
-   
-   def areSymmetric(root1, root2):
-      if not root1 and not root2:
-         return True
-      elif(root1 is None != root2 is None) or root1.val != root2.val:
-         return False
-      else:
-         return areSymmetric(root1.left, root2.right) and areSymmetric(root1.right, root2.left)
-      
-   if not root:
-      return True
-   
-   return areSymmetric(root1, root2)
+   def are_symmetric(root1, root2):
+      "
       
    
    
