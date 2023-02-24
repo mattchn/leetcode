@@ -77,26 +77,8 @@ def symmetricTree(root):
    
    return areSymmetric(root1, root2)
       
-def generateParenthases(n):
-   def rec(n, diff, comb, combs):
-      if diff < 0 or diff > n:
-         return
-      elif n == 0:
-         if diff == 0:
-            combs.append(''.join(comb))
-      else:
-         comb.append('(')
-         rec(n-1, diff+1, comb, combs)
-         comb.pop()
-         comb.append(')')
-         rec(n-1, diff-1, comb, combs)
-         comb.pop()   
-   
-   combs = []
-   rec(2*n, 0, [], combs)
-   return combs
-   
+
    
 print(
-generateParenthases(3)
+kthLargest([1,2,3,4,5,6], 3)
 )
