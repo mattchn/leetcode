@@ -97,18 +97,22 @@ def generateParenthases(n):
    return combs
 
 def fibinacci(n):
-   bottom_up = [1 for i in range(n)]
-   bottom_up[0] =  1
-   bottom_up[1] =  1
    
-   for i in range(2, n):
-      bottom_up[i] = bottom_up[i - 1] + bottom_up[i - 2]
-      print(bottom_up)
+   def fib(n, memo):
+      if memo[n]:
+         return memo[n]
    
-   return bottom_up[n - 1]
+      if n == 1 or n == 2:
+         result = 1
+      else:
+         result = fib(n - 1) + fib(n - 2)
+      
+      memo[n] = result
+      return result
+      
    
 
 
 print(
-fibinacci(100)
+generateParenthases(3)
 )

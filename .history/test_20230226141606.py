@@ -110,5 +110,5 @@ def fibinacci(n):
 
 
 print(
-fibinacci(100)
+fibinacci(6)
 )

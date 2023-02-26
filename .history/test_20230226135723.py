@@ -96,19 +96,8 @@ def generateParenthases(n):
    rec(2*n, 0, [], combs)
    return combs
 
-def fibinacci(n):
-   bottom_up = [1 for i in range(n)]
-   bottom_up[0] =  1
-   bottom_up[1] =  1
+  
    
-   for i in range(2, n):
-      bottom_up[i] = bottom_up[i - 1] + bottom_up[i - 2]
-      print(bottom_up)
-   
-   return bottom_up[n - 1]
-   
-
-
 print(
-fibinacci(100)
+generateParenthases(3)
 )

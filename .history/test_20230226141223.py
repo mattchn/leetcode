@@ -97,11 +97,14 @@ def generateParenthases(n):
    return combs
 
 def fibinacci(n):
-   bottom_up = [1 for i in range(n)]
+   if n == 1 or n == 2:
+      return 1
+   
+   bottom_up = [0 for i in range(n)]
    bottom_up[0] =  1
    bottom_up[1] =  1
    
-   for i in range(2, n):
+   for i in range(n):
       bottom_up[i] = bottom_up[i - 1] + bottom_up[i - 2]
       print(bottom_up)
    
@@ -110,5 +113,5 @@ def fibinacci(n):
 
 
 print(
-fibinacci(100)
+fibinacci(3)
 )
