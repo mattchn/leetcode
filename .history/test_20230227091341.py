@@ -108,7 +108,7 @@ def fibinacci(n):
    return bottom_up[n - 1]
 
 def longestIncreasingSubsequence(arr):
-   L = [1] * len(arr)
+   L = 1 * len(arr)
    for i in range(1, len(L)):
       subproblems = [L[k] for k in range(i) if arr[k] < arr[i]]
       L[i] = 1 + max(subproblems, default=0)
@@ -117,5 +117,5 @@ def longestIncreasingSubsequence(arr):
 
 
 print(
-   print([1] * len([5,2,8,6,3,6,9,5]))
+longestIncreasingSubsequence([5,2,8,6,3,6,9,5])
 )

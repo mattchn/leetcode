@@ -117,5 +117,6 @@ def longestIncreasingSubsequence(arr):
 
 
 print(
-   print([1] * len([5,2,8,6,3,6,9,5]))
+   print( [1] * len([5,2,8,6,3,6,9,5]))
+   longestIncreasingSubsequence([5,2,8,6,3,6,9,5])
 )
