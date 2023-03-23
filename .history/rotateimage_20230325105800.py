@@ -13,14 +13,14 @@ def rotate(matrix):
          #save top left element
          temp = matrix[first][i]
          
-         # top left = bottom left
+         # top-left = bottom-left
          matrix[first][i] = matrix[last-offset][first]
          
-         # bottom left = bottom right
+         # bottom-left = bottom-right
          matrix[last-offset][first] = matrix[last][last-offset]
          
-         # bottom right = top right
+         # bottom-right = top-right
          matrix[last][last-offset] = matrix[i][last]
          
-         # top right = top left
+         # top-right = top-left
          matrix[i][last] = temp
