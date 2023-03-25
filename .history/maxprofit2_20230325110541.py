@@ -1,0 +1,16 @@
+def maxProfit(prices):
+   difference = []
+   n = len(prices)
+   profit = 0
+   
+   for i in range(1, n - 1):
+      difference.append(prices[i] - prices[i - 1])
+   
+   for each_profit in difference:
+      if each_profit > 0:
+         profit += each_profit
+         
+   return profit
+
+prices = [7, 1, 5, 3, 6, 4]
+maxProfit(prices)
