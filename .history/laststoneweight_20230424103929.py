@@ -1,0 +1,12 @@
+def lastStoneWeight(stones):
+   while len(stones) > 2:
+      stones.sort()
+      heaviest = stones[-1]
+      second = stones[-2]
+      result = heaviest - second
+      if result != 0:
+         stones.append(result)
+      stones.pop()
+      stones.pop()
+   
+   return stones[0]
